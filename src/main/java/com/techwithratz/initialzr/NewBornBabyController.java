@@ -12,21 +12,22 @@ public class NewBornBabyController {
 
 	@Value("${baby.weight:No baby weight property found}")
 	String babyWeight;
-
+	
 	@Autowired
 	NewBornBabyService newBornBabyService;
-
+	
 	@Autowired
 	ComponentScanTest componentScanTest;
-
+		
 	@GetMapping("baby/name")
-	public String getBabyName() {
-		return "The baby name is " + newBornBabyService.getBabyName() + ". The baby weight is " + babyWeight;
-	}
-
+    public String getBabyName() {
+    	return "The baby name is " + newBornBabyService.getBabyName() +
+    		". The baby weight is "+babyWeight;
+    }
+	
 	@GetMapping("baby")
-	public Baby getBaby() {
+    public Baby getBaby() {
 		componentScanTest.hello();
-		return newBornBabyService.getBaby();
-	}
+    	return newBornBabyService.getBaby();
+    }
 }
