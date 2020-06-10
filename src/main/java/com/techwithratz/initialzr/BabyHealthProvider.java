@@ -1,5 +1,5 @@
 package com.techwithratz.initialzr;
 
-public class BabyHealthProvider {
+public class BabyHealthProvider implements BabyDayCare {
 
 }

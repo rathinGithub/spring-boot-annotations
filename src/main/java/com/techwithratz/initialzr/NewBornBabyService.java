@@ -1,13 +1,18 @@
 package com.techwithratz.initialzr;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class NewBornBabyService {
 	
+	//@Autowired
+	//BabyHealthProvider babyHealthProvider;
+	
 	@Autowired
-	BabyHealthProvider babyHealthProvider;
+	@Qualifier("babyHealthProvider")
+	BabyDayCare babyDayCare;
 
 	public String getBabyName() {
 		return "Vihaan";
